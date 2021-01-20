@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import UI from './Components/UI/UI';
+import HabboEditor from './Components/HabboEditor/HabboEditor';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UI />
+    <HabboEditor />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('habboeditor')
 );
 
 // If you want to start measuring performance in your app, pass a function
