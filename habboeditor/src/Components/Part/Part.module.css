@@ -1,0 +1,106 @@
+.part_container {
+    position: relative;
+    height: 32px;
+    margin-top: 12px;
+}
+
+.part_selector {
+    display: none;
+}
+
+.part_color_selector {
+    position: absolute;
+    right: 21px;
+}
+
+.part_color_selector {
+    position: absolute;
+}
+
+.part_color_selector button {
+    border: 0px;
+    width: 19px;
+    height: 30px;
+    font-size: 0px;
+    top: 1px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.part_color_selector button:focus {
+    outline: 0;
+}
+
+.part_color_selector .color_next button {
+    left: 122px;
+    background: url(./images/color_right.png);
+}
+
+.part_color_selector .color_prev button {
+    left: -20px;
+    background: url(./images/color_left.png);
+}
+
+.part_color_selector ul {
+    background: url(./images/color_empty.png);
+    height: 30px;
+    width: 120px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.part_color_selector li {
+    position: relative;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    font-size: 0px;
+    background-image: url(./images/color_inactive.png);
+    z-index: 0;
+}
+
+.part_color_selector li span {
+    display: block;
+    cursor: pointer;
+    margin-left: 2px;
+    margin-top: 2px;
+    width: 11px;
+    height: 11px;
+    background-image: url(./images/color_effect.png);
+}
+
+.part_color_selector li span i {
+    display: block;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 11px;
+    height: 11px;
+    background-image: url(./images/color_effect.png)
+}
+
+.part_color {}
+
+.part_color_active {
+    z-index: 1 !important;
+}
+
+.part_color_active span {
+    display: block !important;
+    margin-left: -1px !important;
+    margin-top: -1px !important;
+    width: 10px !important;
+    height: 10px !important;
+    border: 4px solid transparent;
+    border-image: url(./images/color_active.png) 4 fill;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.part_color_active span i {
+    width: 9px !important;
+    height: 9px !important;
+    background-position: -1px -1px !important;
+}

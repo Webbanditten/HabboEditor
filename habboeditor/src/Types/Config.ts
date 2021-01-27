@@ -1,3 +1,12 @@
+import FigureData from "./FigureData";
+
+export interface Locale {
+    boy: string
+    girl: string
+    randomize: string
+    continue: string
+    back: string 
+}
 export default interface Config {
     figure: string
     habboimager: string
@@ -7,4 +16,6 @@ export default interface Config {
     postgender: string
     posturl: string
     gender: string
+    locale: Locale
+    processedFiguredata?: FigureData
 }

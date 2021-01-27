@@ -1,0 +1,21 @@
+[{
+        "name": "boy",
+        "value": "Dreng"
+    },
+    {
+        "name": "girl",
+        "value": "Pige"
+    },
+    {
+        "name": "continue",
+        "value": "Fortsæt"
+    },
+    {
+        "name": "back",
+        "value": "Tilbage"
+    },
+    {
+        "name": "randomize",
+        "value": "Bland"
+    }
+]

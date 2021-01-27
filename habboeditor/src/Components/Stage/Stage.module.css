@@ -3,4 +3,78 @@
     background-repeat: no-repeat;
     width: 406px;
     height: 327px;
+    position: relative;
+    background-position: 0px;
+}
+
+.figure {
+    position: absolute;
+    height: 327px;
+    left: 100px;
+    top: 48px;
+}
+
+.figure img {
+    position: absolute;
+    left: 8px;
+    top: -10px;
+    z-index: 0;
+}
+
+.figureControl {
+    z-index: 1;
+    position: absolute;
+    width: 114px;
+    top: 190px;
+    left: 16px;
+}
+
+.control_button {
+    height: 29px;
+    width: 29px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.control_button:focus {
+    outline: 0px;
+}
+
+.turn_left {
+    background: url(./images/turn_left.png);
+}
+
+.turn_right {
+    background: url(./images/turn_right.png);
+    float: right;
+}
+
+.gender {
+    width: 100%;
+    text-align: center;
+}
+
+.gender_label {
+    font-weight: bold;
+}
+
+.gender_option:first-child {
+    margin-right: 16px;
+}
+
+.gender_option {
+    display: inline-block;
+}
+
+.gender_radio {
+    height: 16px;
+    width: 16px;
+    display: block;
+    padding: 0 0 0 0px;
+}
+
+.gender_radio:checked {}
+
+.editor {
+    margin-top: 13px;
 }
