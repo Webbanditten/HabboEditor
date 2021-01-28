@@ -5,7 +5,89 @@
 }
 
 .part_selector {
-    display: none;
+    position: absolute;
+}
+
+.part {
+    background: url(./images/item.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 21px;
+    top: -10px;
+    width: 47px;
+    height: 47px;
+    z-index: 1;
+}
+
+.part_img_container {
+    width: 33px;
+    height: 33px;
+    left: 7px;
+    top: 7px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.part img {
+    z-index: 2;
+}
+
+.part_container:nth-child(1) img {
+    position: absolute;
+    top: -18px;
+    left: -13px;
+}
+
+.part_container:nth-child(2) img {
+    position: absolute;
+    top: 0px;
+    left: 2px;
+}
+
+.part_container:nth-child(3) img {
+    position: absolute;
+    top: -49px;
+    left: -16px;
+}
+
+.part_container:nth-child(4) img {
+    position: absolute;
+    top: -68px;
+    left: -16px;
+}
+
+.part_container:nth-child(5) img {
+    position: absolute;
+    top: -81px;
+    left: -19px;
+}
+
+.control {
+    position: relative;
+    z-index: 2;
+    top: -1px;
+}
+
+.control button {
+    width: 26px;
+    height: 30px;
+    border: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.control button:focus {
+    outline: 0;
+}
+
+.control_prev button {
+    background: url(./images/item_left.png);
+}
+
+.control_next button {
+    background: url(./images/item_right.png);
+    left: 64px;
 }
 
 .part_color_selector {

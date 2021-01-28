@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 import { ItemModel } from "../Stage/Stage";
 import styles from './Part.module.css';
 
@@ -35,6 +35,47 @@ export default function Part(props: PartProps) {
     }
 
 
+    function nextSprite() {
+        let spriteIndex = (props.item.currentSpriteIndex) ? props.item.currentSpriteIndex : 0;
+        if(props.item.sprites.length-1 === spriteIndex) {
+            spriteIndex = 0;
+        } else {
+            spriteIndex += 1;
+        }
+
+        let copy = [...props.editorModel];
+
+        copy[props.editorModel.indexOf(props.item)].currentSpriteIndex = spriteIndex;
+        copy[props.editorModel.indexOf(props.item)].currentSprite = props.item.sprites[spriteIndex].sprite;
+        copy[props.editorModel.indexOf(props.item)].currentColorIndex = 1;
+        copy[props.editorModel.indexOf(props.item)].currentColor = props.item.sprites[spriteIndex].colors[0];
+
+        console.log(spriteIndex)
+        props.setEditorModel(copy);
+    }
+
+    function prevSprite() {
+        let spriteIndex = (props.item.currentSpriteIndex) ? props.item.currentSpriteIndex : 0;
+        if(props.item.currentSpriteIndex === 0) {
+            spriteIndex = props.item.sprites.length-1;
+        } else {
+            spriteIndex -= 1;
+        }
+
+        let copy = [...props.editorModel];
+
+        console.log(props.item.sprites[spriteIndex].sprite)
+
+        copy[props.editorModel.indexOf(props.item)].currentSpriteIndex = spriteIndex;
+        copy[props.editorModel.indexOf(props.item)].currentSprite = props.item.sprites[spriteIndex].sprite;
+        copy[props.editorModel.indexOf(props.item)].currentColorIndex = 1;
+        copy[props.editorModel.indexOf(props.item)].currentColor = props.item.sprites[spriteIndex].colors[0];
+        console.log(copy);
+        console.log(spriteIndex)
+        props.setEditorModel(copy);
+    }
+
+
     function nextColorPage() {
         if(colorPage === pages) {
             setColorPage(0);
@@ -57,18 +98,21 @@ export default function Part(props: PartProps) {
         return 0;
     }
 
-    if (props.item.currentColorIndex && props.item.currentColor && props.item.currentSpriteIndex && props.item.currentSprite) {
+    if (props.item.currentColorIndex !== undefined && props.item.currentColor !== undefined && props.item.currentSpriteIndex !== undefined && props.item.currentSprite !== undefined) {
+        const colorIndexWithZero = (props.item.currentColorIndex > 9) ? props.item.currentColorIndex : ('0' + props.item.currentColorIndex?.toString().slice(-2));
         return (
             <div className={styles.part_container}>
                 <div className={styles.part_selector}>
                     <div className={classNames(styles.control, styles.control_prev)}>
-                        <button>Prev</button>
+                        <button onClick={prevSprite}>Prev</button>
                     </div>
                     <div className={styles.part}>
-                        <img src={`${props.habboImagerUrl}?figure=${props.item.currentSprite}${('0' + props.item.currentColorIndex?.toString().slice(-2))}&action=std&direction=${props.direction}&gesture=std&head_direction=${props.direction}&head=${headonly}`} alt="habbo" draggable={false} />
-                    </div>
+                        <div className={styles.part_img_container}>
+                            <img src={`${props.habboImagerUrl}?figure=${props.item.currentSprite}${colorIndexWithZero}&action=std&direction=${props.direction}&gesture=std&head_direction=${props.direction}&head=${headonly}`} alt="habbo" draggable={false} />
+                        </div>
+                   </div>
                     <div className={classNames(styles.control, styles.control_next)}>
-                        <button>Next</button>
+                        <button onClick={nextSprite}>Next</button>
                     </div>
                 </div>
                 <div className={styles.part_color_selector}>
