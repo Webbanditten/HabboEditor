@@ -3079,6 +3079,18 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, can
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001159.tgz#bebde28f893fa9594dadcaa7d6b8e2aa0299df20"
   integrity sha512-w9Ph56jOsS8RL20K9cLND3u/+5WASWdhC/PPrf+V3/HsM3uHOavWOR1Xzakbv4Puo/srmPHudkmCRWM7Aq+/UA==
 
+canvas-context@^3.0.1:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/canvas-context/-/canvas-context-3.1.0.tgz#eb354cdd98d5ddcbe9773f09fa5e3709ba2399b1"
+  integrity sha512-XoWMC/y30EZoGSuFwsKhmrB3Ba2v56FDLtws2/itwyIUJ1JwnsZHOPqrf90Yiy3UoWA2HLNIvK6RarxbQdatkA==
+
+canvas-tint-image@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/canvas-tint-image/-/canvas-tint-image-2.1.0.tgz#da2a6e3db822a289f4dc333c8676a177ac105632"
+  integrity sha512-KfxbgG5GHAFxtKfsrAlzyQdlM6yP0aL/ibIcdEncQz9vf4YH9n5zZE5T5uFU7spxymHofTS621z+d1vIsJxXoA==
+  dependencies:
+    canvas-context "^3.0.1"
+
 capture-exit@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/capture-exit/-/capture-exit-2.0.0.tgz#fb953bfaebeb781f62898239dabb426d08a509a4"
@@ -5283,6 +5295,11 @@ get-caller-file@^2.0.1:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
+
+get-canvas-context@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/get-canvas-context/-/get-canvas-context-1.0.2.tgz#d6e7b50bc4e4c86357cd39f22647a84b73601e93"
+  integrity sha1-1ue1C8TkyGNXzTnyJkeoS3NgHpM=
 
 get-intrinsic@^1.0.0:
   version "1.0.1"
